@@ -43,7 +43,7 @@ There are many papers have already proved that the simple machine learning regre
 The whole framework of the survival prediction task looks like that:
 
 <p align="center">
-  <img src="./images/Framework.png" alt="framework" title="framework" width="700" height="auto">
+  <img src="./images/Framework.png" alt="framework" title="framework" width="500" height="auto">
 </p>
   
 ## Results
