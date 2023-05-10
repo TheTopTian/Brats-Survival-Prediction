@@ -26,6 +26,17 @@ After combining the extracted features based on radiomics and the manual defined
 
 <img src="./images/Feature.png" alt="feature selection" title="feature selection">
 
+## Regression Method
+
+There are many papers have already proved that the simple machine learning regression methods like random forest or MLP have better performance compared with the deep learning methods. We do a comparison among all the normal regression methods and find that the pipeline which is combined with standard scaler and SGD regressor has the best performance among all of them.
+
+<img src="./images/Regression_Methods.png" alt="regression methods" title="regression methods">
+
+## Framework of Survival
+
+The whole framework of the survival prediction task looks like that:
+<img src="./images/Framework.png" alt="framework" title="framework">
+
 ## Results
 
 We will evaluate the performance of our models using various metrics such as accuracy, precision, recall, and area under the receiver operating characteristic (ROC) curve. We will also compare our models with the baseline models provided by the Brain Tumor Challenge.
