@@ -48,7 +48,49 @@ The whole framework of the survival prediction task looks like that:
   
 ## Results
 
-We will evaluate the performance of our models using various metrics such as accuracy, precision, recall, and area under the receiver operating characteristic (ROC) curve. We will also compare our models with the baseline models provided by the Brain Tumor Challenge.
+We tried different threshold of the filter (\cref{tab:Different parameters}). It was clear that the threshold $>|0.10|$ showed the best result ($0.621$) among all of them. After filtering, the features of each case were reduced from 126 to 28 which also sped up the computation. The accuracy was far higher than another two related paper also extracted radiomic features in BraTS 2020.
+
+%%%%% TABLE2 %%%%%%%%%
+\begin{table}[h]
+\caption{Comparison of different setting of thresholds parameters in the filter (extract features only from $T_1$ images).}
+\centering
+	\begin{tabular}{P{3.0cm}P{1cm}cccc}
+	\toprule
+	\textbf{Different Thresholds} &	\textbf{Accuracy} & \textbf{MSE} & \textbf{SpearmanR}\\
+ 	\midrule 
+ 	without & 0.379 & $1.079\times10^{10}$ & 0.335\\
+ 	$>|0.08|$ & 0.586 & $2.056\times10^8$ & 0.518\\
+    $>|0.10|$ & \textbf{0.621} & $3.641\times10^7$ & 0.502\\
+    $>|0.12|$ & 0.517 & $5.775\times10^7$ & 0.417\\
+    $<-0.01$ & 0.552 & $5.167\times10^7$ & 0.480\\
+    $<-0.05$ & 0.379 & $1.516\times10^8$ & 0.050\\
+    $<-0.10$ & 0.586 & $1.406\times10^5$ & 0.537\\
+	\bottomrule \\
+\end{tabular}
+\label{tab:Different parameters}
+\end{table}
+%%%%% TABLE2 %%%%%%%%%
+We also tried to use different input of the images since there were 4 types of images in the training dataset. It was also shown that the input of $T_1$ image had better result of accuracy compared with other images (\cref{tab:Different input images}).
+
+%%%%% TABLE3 %%%%%%%%%
+\begin{table}[h]
+\caption{Extract features from different images of the same case (threshold was $>|0.10|$).}
+\centering
+	\begin{tabular}{P{3.3cm}P{1.0cm}cc}
+	\toprule
+	\textbf{Different Input Modalities} &	\textbf{Accuracy} & \textbf{MSE} & \textbf{SpearmanR}\\
+ 	\midrule 
+ 	$T_1$ & \textbf{0.621} & $3.641\times10^7$ & 0.502\\
+ 	$T_{1ce}$ & 0.448 & $2.977\times10^8$ & 0.433\\
+ 	$T_2$ & 0.483 & $1.118\times10^5$ & 0.233\\
+ 	$T_{2Flair}$ & 0.345 & $2.470\times10^5$ & 0.127\\
+ 	Combination of 4 modalities & 0.517 & $7.183\times10^6$ & 0.494\\
+	\bottomrule \\
+\end{tabular}
+\label{tab:Different input images}
+\end{table}
+%%%%% TABLE3 %%%%%%%%%
+
 
 ## Conclusion
 
