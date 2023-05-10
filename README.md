@@ -48,17 +48,12 @@ The whole framework of the survival prediction task looks like that:
   
 ## Results
 
-We tried different threshold of the filter (\cref{tab:Different parameters}). It was clear that the threshold $>|0.10|$ showed the best result ($0.621$) among all of them. After filtering, the features of each case were reduced from 126 to 28 which also sped up the computation. The accuracy was far higher than another two related paper also extracted radiomic features in BraTS 2020.
+We tried different threshold of the filter. It was clear that the threshold $>|0.10|$ showed the best result ($0.621$) among all of them. After filtering, the features of each case were reduced from 126 to 28 which also sped up the computation. The accuracy was far higher than another two related paper also extracted radiomic features in BraTS 2020.
 
-%%%%% TABLE2 %%%%%%%%%
-\begin{table}[h]
-\caption{Comparison of different setting of thresholds parameters in the filter (extract features only from $T_1$ images).}
-\centering
-	\begin{tabular}{P{3.0cm}P{1cm}cccc}
-	\toprule
-	\textbf{Different Thresholds} &	\textbf{Accuracy} & \textbf{MSE} & \textbf{SpearmanR}\\
- 	\midrule 
- 	without & 0.379 & $1.079\times10^{10}$ & 0.335\\
+
+|**Different Thresholds**|**Accuracy**|**MSE**|**SpearmanR**|
+| --- | --- | --- | --- |
+|without|0.379|$1.079\times10^{10}$|0.335|
  	$>|0.08|$ & 0.586 & $2.056\times10^8$ & 0.518\\
     $>|0.10|$ & \textbf{0.621} & $3.641\times10^7$ & 0.502\\
     $>|0.12|$ & 0.517 & $5.775\times10^7$ & 0.417\\
