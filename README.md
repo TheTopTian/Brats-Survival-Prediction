@@ -1,13 +1,14 @@
-# Brats-Survival-Prediction
-Survival prediction for the challenge Brats2020
-
 # Brain Tumor Challenge: Survival Prediction
 
-In this project, we aim to predict the survival of patients with brain tumors using machine learning techniques. The Brain Tumor Challenge dataset provides clinical and genetic features of patients with glioblastoma multiforme, the most common and aggressive type of brain tumor.
+In this project, we aim to predict the survival of patients with brain tumors using machine learning techniques.
 
 ## Dataset
 
-The dataset contains clinical information of 191 patients with glioblastoma multiforme, including age, sex, Karnofsky Performance Status (KPS), and O(6)-Methylguanine-DNA Methyltransferase (MGMT) promoter methylation status, as well as genetic features such as gene expression, DNA methylation, and copy number variation. The dataset also includes the survival time in days and the survival status (1 = alive, 0 = dead) of each patient.
+We used the dataset from the challenge BraTS 2020 (https://www.med.upenn.edu/cbica/brats2020/data.html), it has both segmentation and survival prediction task inside. 
+
+***Segmentation***: The dataset contains several model scans with NIFTI files (.nii.gz) and describe a) native(**T1**) and b) post-contrast T1-weighted (**T1Gd**), c) T2-weighted (**T2**), and d) T2 Fluid Attenuated Inversion Recovery (**T2-FLAIR**) volumns. All the imaging datasets have been segmented manually.
+
+***Survival***: The overall survival (OS) data, defined in days, are included in a comma-separated value (.csv) file with correspondences to the pseudo-identifiers of the imaging data. The .csv file also includes the age of patients, as well as the resection status. N
 
 ## Methodology
 
