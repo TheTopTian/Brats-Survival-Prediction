@@ -9,7 +9,7 @@ We used the dataset from the challenge BraTS 2020 (https://www.med.upenn.edu/cbi
 ***Segmentation***: The dataset contains several model scans with NIFTI files (.nii.gz) and describe a) native(**T1**) and b) post-contrast T1-weighted (**T1Gd**), c) T2-weighted (**T2**), and d) T2 Fluid Attenuated Inversion Recovery (**T2-FLAIR**) volumns. All the imaging datasets have been segmented manually.
 
 <p align="center">
-  <img src="./images/Brain and label.png" alt="brain and label" title="brain and label" width="500" height="auto">
+  <img src="./images/Brain and label.png" alt="brain and label" title="brain and label" width="700" height="auto">
 </p>
   
 ***Survival***: The overall survival (OS) data, defined in days, are included in a comma-separated value (.csv) file with correspondences to the pseudo-identifiers of the imaging data. The .csv file also includes the age of patients, as well as the resection status.
@@ -26,19 +26,26 @@ Correct extraction of features is the basis for accurate prediction. We used two
 
 After combining the extracted features based on radiomics and the manual defined method, there were 126 features for one single case. Many of them actually didn’t have high relationship with the survival days, most of them were just noise in the final regression. We used the SpearmanR to show the relationship between the features and survival day. Set a threshold to choose the parameter and lower the outliers.
 
-<img src="./images/Feature.png" alt="feature selection" title="feature selection">
-
+<p align="center">
+  <img src="./images/Feature.png" alt="feature selection" title="feature selection" width="700" height="auto">
+</p>
+  
 ## Regression Method
 
 There are many papers have already proved that the simple machine learning regression methods like random forest or MLP have better performance compared with the deep learning methods. We do a comparison among all the normal regression methods and find that the pipeline which is combined with standard scaler and SGD regressor has the best performance among all of them.
 
-<img src="./images/Regression_Methods.png" alt="regression methods" title="regression methods">
-
+<p align="center">
+  <img src="./images/Regression_Methods.png" alt="regression methods" title="regression methods" width="700" height="auto">
+</p>
+  
 ## Framework of Survival
 
 The whole framework of the survival prediction task looks like that:
-<img src="./images/Framework.png" alt="framework" title="framework">
 
+<p align="center">
+  <img src="./images/Framework.png" alt="framework" title="framework" width="700" height="auto">
+</p>
+  
 ## Results
 
 We will evaluate the performance of our models using various metrics such as accuracy, precision, recall, and area under the receiver operating characteristic (ROC) curve. We will also compare our models with the baseline models provided by the Brain Tumor Challenge.
