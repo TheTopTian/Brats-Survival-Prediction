@@ -8,8 +8,10 @@ We used the dataset from the challenge BraTS 2020 (https://www.med.upenn.edu/cbi
 
 ***Segmentation***: The dataset contains several model scans with NIFTI files (.nii.gz) and describe a) native(**T1**) and b) post-contrast T1-weighted (**T1Gd**), c) T2-weighted (**T2**), and d) T2 Fluid Attenuated Inversion Recovery (**T2-FLAIR**) volumns. All the imaging datasets have been segmented manually.
 
-<img src="./images/Brain and label.png" alt="brain and label" title="brain and label">
-
+<p align="center">
+  <img src="./images/Brain and label.png" alt="brain and label" title="brain and label" width="500" height="auto">
+</p>
+  
 ***Survival***: The overall survival (OS) data, defined in days, are included in a comma-separated value (.csv) file with correspondences to the pseudo-identifiers of the imaging data. The .csv file also includes the age of patients, as well as the resection status.
 
 ## Features Extraction
