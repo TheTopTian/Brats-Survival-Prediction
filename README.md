@@ -35,7 +35,7 @@ After combining the extracted features based on radiomics and the manual defined
 There are many papers have already proved that the simple machine learning regression methods like random forest or MLP have better performance compared with the deep learning methods. We do a comparison among all the normal regression methods and find that the pipeline which is combined with standard scaler and SGD regressor has the best performance among all of them.
 
 <p align="center">
-  <img src="./images/Regression_Methods.png" alt="regression methods" title="regression methods" width="700" height="auto">
+  <img src="./images/Regression_Methods.png" alt="regression methods" title="regression methods" width="400" height="auto">
 </p>
   
 ## Framework of Survival
