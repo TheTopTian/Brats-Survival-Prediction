@@ -54,7 +54,7 @@ We tried different threshold of the filter. It was clear that the threshold $>|0
 |**Different Thresholds**|**Accuracy**|**MSE**|**SpearmanR**|
 | --- | --- | --- | --- |
 |without|0.379|$1.079\times10^{10}$|0.335|
-|$>|0.08|$|0.586|$2.056\times10^8$|0.518|
+|Absolute value of -0.08|0.586|$2.056\times10^8$|0.518|
 |$>|0.10|$|**0.621**|$3.641\times10^7$|0.502|
 |$>|0.12|$|0.517|$5.775\times10^7$|0.417|
 |$<-0.01$|0.552|$5.167\times10^7$|0.480|
